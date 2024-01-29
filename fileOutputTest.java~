@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+public class fileOutputTest{
+      public static void main(String [] args) throws FileNotFoundException{
+           File inputFile = new File("output.txt");
+           Scanner fileReader = new Scanner(inputFile);
+           
+            File outputFile = new File("output.txt");
+           PrintWriter fileWriter = new PrintWriter(outputFile);
+           
+           
+           while(fileReader.hasNextLine()){
+                 int currentLine = Integer.parseInt(fileReader.nextLine());
+                 fileWriter.println(currentLine);
+           }
+           fileWriter.flush();
+           fileWriter.close();
+           fileReader.close();
+           
+          
+           
+           
+      }
+}
